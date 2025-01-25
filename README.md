@@ -1,45 +1,43 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Installation
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+**To install and run the project, please follow these steps:**
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+1. **Prerequisites**: Ensure that you have the following dependencies installed:
 
----
+```
+  node v18.17.0
+```
 
-## Edit a file
+2. **Clone the Repository**: Clone the project repository to your local machine using the following command:
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+```
+  git clone
+```
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+3. **Install Dependencies**: Navigate to the project directory and install the required dependencies using the following command:
 
----
+```
+  npm install
+```
 
-## Create a file
+4. **Run the Project**: Start the project by running the following command:
 
-Next, you’ll add a new file to this repository.
+```
+  npm start
+```
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+5. **Access the Project**: Access the project by opening your browser and entering the following URL:
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+```
+  http://localhost:875/
+```
 
----
+# Assessment
 
-## Clone a repository
+To begin the upgrading process, assess the current state of this project. Identify the areas that require improvement and determine the impact of the upgrade on this project's functionality. This assessment will serve as a foundation for the planning phase.
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+# Planning
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+1. The project currently works with web3 only and does not have a smart contract in place to manage payments. Therefore, the project team recognizes the risk associated with this setup and plans to implement a smart contract to handle payment management.
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+2. The project currently uses an older version of the Vanilla JS library for the frontend. However, the team recognizes the challenges of integrating web3 functionality with this setup. To address this, they plan to upgrade from Vanilla JS to ReactJS or Next.js. This upgrade will provide a more structured and efficient development environment, making it easier to integrate web3 functionality into the project. ReactJS and Next.js offer built-in support for managing state, handling component rendering, and interacting with APIs, which can simplify the implementation of web3 integrations.
