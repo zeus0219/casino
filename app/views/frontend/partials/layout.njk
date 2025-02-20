@@ -123,41 +123,41 @@
                     url: baseUrl+"logout",
                     success: function(response){}
                })
-               setTimeout(function() {
-                location.reload();
-               }, 2000); 
+            //    setTimeout(function() {
+            //     location.reload();
+            //    }, 2000); 
 
             }
         })
 
         socket.on('currentBalance', function (res) {
-        console.log('res -->', res )
+            console.log('res -->', res )
 
-        $('#current_balance').text(res.balance);
-        $('#deposit_coin').val('');
-        $("#deposite_user_balance").html(res.balance);
-        $.toast({
-            heading: 'Success',
-            text: "Deposited successfully.",
-            position: 'top-right',
-            icon: 'success'
-        });
-        {# setTimeout(function(){ window.location.reload(); }, 3000); #}
+            $('#current_balance').text(res.balance);
+            $('#deposit_coin').val('');
+            $("#deposite_user_balance").html(res.balance);
+            $.toast({
+                heading: 'Success',
+                text: "Deposited successfully.",
+                position: 'top-right',
+                icon: 'success'
+            });
+            {# setTimeout(function(){ window.location.reload(); }, 3000); #}
 
         });
 
         socket.on('withdrawCurrentBalance', function (res) {
 
-        $('#current_balance_' + res.userId).text(res.balance);
-        $('#withdraw_coin').val('');
-        $("#withdraw_user_balance").html(res.balance);
-        $.toast({
-            heading: "success",
-            text: 'Withdraw request sent successfully',
-            position: "top-right",
-            icon: "success",
-        });
-        {# setTimeout(function(){ window.location.reload(); }, 3000); #}
+            $('#current_balance_' + res.userId).text(res.balance);
+            $('#withdraw_coin').val('');
+            $("#withdraw_user_balance").html(res.balance);
+            $.toast({
+                heading: "success",
+                text: 'Withdraw request sent successfully',
+                position: "top-right",
+                icon: "success",
+            });
+            {# setTimeout(function(){ window.location.reload(); }, 3000); #}
 
         
         });
@@ -345,6 +345,22 @@
    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
     <script type="module">
         $(document).on("click","#userlogin", async () => {
+            $.ajax({
+                type: 'POST',
+                url: "/login", 
+                data: {walletId: '0xD01c0d449B6EEe5276A992343cc2300Cf5990789'},
+                success: function(resultData) {
+                    console.log('resultData -->', resultData ) 
+                    resultData = JSON.parse(resultData)
+
+                    if(resultData.status == 'success'){
+                        location.reload();
+                    } else {
+                        $.toast({ heading: 'Error', text: resultData.message,position: 'top-right',icon: 'error'});
+                    }
+                }
+            });
+            return;
             if (window.solana) {
                 let isPhantom = window.solana.isPhantom;
                 if (isPhantom) {

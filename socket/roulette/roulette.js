@@ -170,6 +170,8 @@ module.exports = function ( config ) {
 	};
 
 	module.bettingStart = async function ( data, callback ) {
+		settingDetail = {min_bet: 0.001, max_bet: 10000}
+		joinedUser = {name: 'test', id: 1, balance:400}
 		try {
 			var userId = data.user_id;
 			var betAmount = data.bet_amount;

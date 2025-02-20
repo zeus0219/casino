@@ -4,6 +4,7 @@ module.exports = function ( config ) {
 		try {
 			console.log( 'walletID -->', req.body.walletId );
 			if ( true ) {
+				req.session.user={name: 'test', id: 1, balance:400}
 				console.log( 'New register......' );
 				return res.send( JSON.stringify( { "status": 'success', 'message': 'Login successfully' } ) );
 			}

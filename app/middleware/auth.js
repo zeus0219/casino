@@ -3,7 +3,7 @@ module.exports = function () {
 
 	module.login = async function ( req, res, next ) {
 		if ( req.session.user ) {
-			req.session.user = userDetail;
+			req.session.user={name: 'test', id: 1, balance:400}
 			next();
 		} else {
 			req.flash( 'error', "Please log in to Play" );

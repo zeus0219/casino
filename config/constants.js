@@ -1,5 +1,5 @@
 module.exports = {
-	"baseUrl": "http://localhost:875/",
+	"baseUrl": "/",
 	"siteName": "CASINC",
 	"rouletteStartTime": 10,
 	"rouletteRotateDuration": 8000,

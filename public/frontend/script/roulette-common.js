@@ -30,7 +30,7 @@ socket.emit( 'getclintorserverseedData', userId, function ( response ) {
 
 $( window ).focus( () => {
   // console.log('---> on change tab load page');
-  window.location.reload();
+  // window.location.reload();
 } );
 
 
@@ -445,6 +445,7 @@ $( '.findGameDetails' ).on( 'click', function () {
 // Start : user betting start in game
 function bettingStart ( btn_click ) {
   var betAmt = $.trim( $( '#betAmounts' ).val() );
+  userId = 1;
   $( "#betAmounts" ).val( "" );
 
   if ( !userId ) {
